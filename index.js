@@ -36,7 +36,7 @@ function addNumbers(num1, num2) {
  * 
 */
 function sayGoodbye(name) {
-  return name;
+  return `Goodbye, ${name}. Have a great day.`;
 }
 
 //console.log(sayGoodbye("Shane"));
@@ -55,8 +55,7 @@ function sayGoodbye(name) {
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
 function temperatureCtoF(temp) {
-  let temperature = Math.round(temp*9/5 + 32);
-  return temperature;
+  return Math.round(temp*9/5 + 32);
 }
 
 //console.log(temperatureCtoF(24));
@@ -80,9 +79,9 @@ function temperatureCtoF(temp) {
 */
 function temperatureInF(temp, unit) {
   if (unit === 'F' || unit === 'f'){
-      return temp;
+      return `${temp}F`;
   }else {
-      return temperatureCtoF(temp);
+      return `${temperatureCtoF(temp)}F`;
   }
 }
 
@@ -145,10 +144,19 @@ function getName(obj) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(array) {
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === 'apple'){
+      console.log(array[i]);
+      return i;
+    } else {
+      console.log(array[i]);
+    }
+  }
+  return -1;
 }
 
+//console.log(appleIndex([ 'orange', 'grape', 'apple', 'banana', 'mango' ]));
 /**
  * ### Challenge `isItAnApple`
  * 
