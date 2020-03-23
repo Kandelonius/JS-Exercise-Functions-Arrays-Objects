@@ -124,7 +124,7 @@ function makePersonObject(myId, myName, myEmail) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(obj) {
-  return ('Hello, my name is ' + obj.name);
+  return (`Hello, my name is ${obj.name}`);
 }
 
 //console.log(getName({ id: 1, name: 'Leia', email: 'leia@leia.com' }));
@@ -287,9 +287,20 @@ function getModelYears(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  for (let i = 0; i < inventory.length; i++){
+    const myCar = inventory[i];
+    if (myCar.id === id){
+      console.log("hi" + myCar.car_make);
+      return `This is a ${myCar.car_make} ${myCar.car_model}`;
+    }
+    //console.log(myCar);
+  }
+  //console.log(myCar);
+  //return -1;
 }
+
+//console.log(getCarInfoById(inventory, 1));
 
 /**
  * ### Challenge `getOlderCars`
