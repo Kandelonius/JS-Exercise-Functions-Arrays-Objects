@@ -35,10 +35,11 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  return name;
 }
 
+//console.log(sayGoodbye("Shane"));
 /**
  * ### Challenge `temperatureCtoF`
  * 
@@ -53,9 +54,12 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(temp) {
+  let temperature = Math.round(temp*9/5 + 32);
+  return temperature;
 }
+
+//console.log(temperatureCtoF(24));
 
 /**
  * ### Challenge `temperatureInF`
@@ -74,11 +78,17 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(temp, unit) {
+  if (unit === 'F' || unit === 'f'){
+      return temp;
+  }else {
+      return temperatureCtoF(temp);
+  }
 }
 
-
+//   console.log(temperatureInF(88, 'f'));
+//   console.log(temperatureInF(88, 'F'));
+//   console.log(temperatureInF(24, 'c'));
 /**
  * ### Challenge `makePersonObject`
  * 
@@ -95,10 +105,12 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(myId, myName, myEmail) {
+  let obj = {id : myId, name : myName, email : myEmail};
+      return obj;
 }
 
+//console.log(makePersonObject(5, "Leia", "leia@leia.com"));
 /**
  * ### Challenge `getName`
  * 
@@ -112,10 +124,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(obj) {
+  return ('Hello, my name is ' + obj.name);
 }
 
+//console.log(getName({ id: 1, name: 'Leia', email: 'leia@leia.com' }));
 
 /**
  * ### Challenge `appleIndex`
