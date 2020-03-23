@@ -183,9 +183,6 @@ function isItAnApple(strArray) {
   }
   return newArray;
 }
-
-
-
 /*
 // ⭐️ Example Test Data ⭐️
 
@@ -239,7 +236,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const yourCar = inventory[index];
+  return `The is a ${yourCar.car_make} ${yourCar.car_model}`
 }
 
 /**
