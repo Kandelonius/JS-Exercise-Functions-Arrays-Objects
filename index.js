@@ -124,7 +124,7 @@ function makePersonObject(myId, myName, myEmail) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(obj) {
-  return (`Hello, my name is ${obj.name}`);
+  return `Hello, my name is ${obj.name}`;
 }
 
 //console.log(getName({ id: 1, name: 'Leia', email: 'leia@leia.com' }));
@@ -316,8 +316,15 @@ function getCarInfoById(inventory, id) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory, year) {
+  const yearsArray = [];
+  for (let i = 0; i < inventory.length; i++){
+    const myCar = inventory[i];
+    if(myCar.car_year <= year){
+      yearsArray.push(myCar);
+    }
+  }
+  return yearsArray;
 }
 
 /**
