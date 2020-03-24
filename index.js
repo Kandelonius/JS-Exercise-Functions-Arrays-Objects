@@ -367,11 +367,11 @@ function getGermanCars(inventory) {
 function carMaker(milage) {
   let usedCar = {
     odometer : milage,
-    drive : function(){
-
+    drive : function(milage){
+      this.odometer += milage;
+      return this.odometer;
     }
   } 
-  
   return usedCar;
 }
 
