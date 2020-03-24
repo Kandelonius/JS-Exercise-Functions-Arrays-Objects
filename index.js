@@ -340,7 +340,7 @@ function getOlderCars(inventory, year) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(inventory, myMake) {
+function getGermanCars(inventory) {
   const makeArray = [];
   for (let i = 0; i < inventory.length; i++){
     const myCar = inventory[i];
@@ -364,8 +364,15 @@ function getGermanCars(inventory, myMake) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(inventory, milage) {
-  /* code here */
+function carMaker(milage) {
+  let usedCar = {
+    odometer : milage,
+    drive : function(){
+
+    }
+  } 
+  
+  return usedCar;
 }
 
 /// ////// END OF CHALLENGE /////////
