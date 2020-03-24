@@ -144,16 +144,17 @@ function getName(obj) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(array) {
-  for (let i = 0; i < array.length; i++){
+function appleIndex(array) { 
+  return array.indexOf('apple');
+/*  for (let i = 0; i < array.length; i++){
     if (array[i] === 'apple'){
       //console.log(array[i]);
       return i;
     } else {
       //console.log(array[i]);
     }
-  }
-  return -1;
+  }*/
+  //return -1;
 }
 
 //console.log(appleIndex([ 'orange', 'grape', 'apple', 'banana', 'mango' ]));
@@ -217,7 +218,7 @@ function get3rdCar(inventory) {
   const the3rd = inventory[2];
   return `The is a ${the3rd.car_make} ${the3rd.car_model}`
 }
-
+//console.log(get3rdCar(inventory));
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -291,7 +292,7 @@ function getCarInfoById(inventory, id) {
   for (let i = 0; i < inventory.length; i++){
     const myCar = inventory[i];
     if (myCar.id === id){
-      console.log("hi" + myCar.car_make);
+      //console.log("hi" + myCar.car_make);
       return `This is a ${myCar.car_make} ${myCar.car_model}`;
     }
     //console.log(myCar);
